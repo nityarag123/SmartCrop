@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="auth.regTitle">Register — SmartCrop</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-auth="optional">
+
+  <header class="site-header" id="site-header"></header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="brand-wrap">
+        <img src="assets/icons/logo.svg" alt="SmartCrop logo">
+        <h1 data-i18n="auth.regTitle">Create your account</h1>
+        <p class="sub" data-i18n="auth.regSub">Free for every farmer — takes one minute</p>
+      </div>
+
+      <div id="auth-alert"></div>
+
+      <form id="register-form" novalidate>
+        <div class="form-group">
+          <label for="name" data-i18n="auth.fullName">Full name</label>
+          <input class="input" type="text" id="name" name="name" autocomplete="name" data-i18n="auth.namePh" placeholder="e.g. Ramesh Kumar">
+        </div>
+        <div class="form-group">
+          <label for="email" data-i18n="auth.email">Email</label>
+          <input class="input" type="email" id="email" name="email" autocomplete="email" data-i18n="auth.emailPh" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="password" data-i18n="auth.password">Password</label>
+          <div class="password-wrap">
+            <input class="input" type="password" id="password" name="password" autocomplete="new-password" data-i18n="auth.passwordPh" placeholder="At least 6 characters">
+            <button type="button" class="eye-btn" id="toggle-pass" aria-label="Show password">👁</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="auth.lang">Preferred language</label>
+          <div class="language-picker" id="lang-picker">
+            <button type="button" data-lang="en">English</button>
+            <button type="button" data-lang="hi">हिन्दी</button>
+            <button type="button" data-lang="te">తెలుగు</button>
+            <button type="button" data-lang="ta">தமிழ்</button>
+            <button type="button" data-lang="gu">ગુજરાતી</button>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block btn-lg" type="submit" id="register-btn" data-i18n="auth.registerBtn">Create account</button>
+      </form>
+
+      <div class="auth-switch" data-i18n="auth.haveAccount">Already have an account?</div>
+      <div class="auth-switch"><a href="login.html" data-i18n="nav.login">Login here</a></div>
+
+      <div class="divider" data-i18n="auth.or"></div>
+      <a class="btn btn-outline btn-block" href="index.html" data-i18n="auth.backHome">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

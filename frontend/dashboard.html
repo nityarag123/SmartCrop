@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nav.dashboard">Dashboard — SmartCrop</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-auth="required">
+
+  <header class="site-header" id="site-header"></header>
+
+  <section class="dash-hero">
+    <div class="container">
+      <div class="welcome-chip">🌾 <span id="user-name">Farmer</span></div>
+      <h1 data-i18n="dash.welcome">Welcome to your farm dashboard</h1>
+      <p class="sub" id="user-location"></p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="dash-grid">
+      <a class="dash-tile" href="weather.html">
+        <span class="dt-arrow">→</span>
+        <span class="dt-ico">🌦</span>
+        <h3 data-i18n="nav.weather">Weather</h3>
+        <p data-i18n="dash.weatherSub">Current weather &amp; 5-day forecast</p>
+        <div class="weather-mini" id="dash-weather"><span class="spinner sm"></span></div>
+      </a>
+      <a class="dash-tile" href="crop-recommendation.html">
+        <span class="dt-arrow">→</span>
+        <span class="dt-ico">🌱</span>
+        <h3 data-i18n="nav.crop">Recommend Crop</h3>
+        <p data-i18n="dash.cropSub">AI picks the best crop for your field</p>
+      </a>
+      <a class="dash-tile" href="soil.html">
+        <span class="dt-arrow">→</span>
+        <span class="dt-ico">🧪</span>
+        <h3 data-i18n="nav.soil">Soil Analysis</h3>
+        <p data-i18n="dash.soilSub">Understand your soil nutrients</p>
+      </a>
+      <a class="dash-tile" href="pest-detection.html">
+        <span class="dt-arrow">→</span>
+        <span class="dt-ico">🐛</span>
+        <h3 data-i18n="nav.pest">Pest Detection</h3>
+        <p data-i18n="dash.pestSub">Photo-based pest &amp; disease check</p>
+      </a>
+      <a class="dash-tile" href="crop-calendar.html">
+        <span class="dt-arrow">→</span>
+        <span class="dt-ico">📅</span>
+        <h3 data-i18n="nav.calendar">Crop Calendar</h3>
+        <p data-i18n="dash.calendarSub">Know what to do, when</p>
+      </a>
+      <a class="dash-tile" href="schemes.html">
+        <span class="dt-arrow">→</span>
+        <span class="dt-ico">🏛</span>
+        <h3 data-i18n="nav.schemes">Government Schemes</h3>
+        <p data-i18n="dash.schemesSub">Subsidies &amp; support programs</p>
+      </a>
+      <a class="dash-tile" href="chatbot.html">
+        <span class="dt-arrow">→</span>
+        <span class="dt-ico">🤖</span>
+        <h3 data-i18n="nav.chat">Farm Assistant</h3>
+        <p data-i18n="dash.chatSub">Ask anything — by voice or text</p>
+      </a>
+    </div>
+
+    <div class="dash-recent" id="dash-recent">
+      <h2 data-i18n="dash.recent">Recent activity &amp; notifications</h2>
+      <div id="dash-recent-body"><span class="spinner"></span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/geo.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

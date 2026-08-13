@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Local Admin",
+    "email": "admin@example.com",
+    "password_hash": "scrypt:32768:8:1$RRIO7e674A1y4f1s$296a0f0185584d6f5af40df9c6afffcc2997ad82acbe35aa14a701e402006d15b1b345b88b2930ac47853ccd30644a882e5374c4a2dd41668ce27d1b3ba8d271",
+    "role": "admin",
+    "language": "en"
+  },
+  {
+    "id": 2,
+    "name": "nityarag",
+    "email": "nfkjnf#@gmail.com",
+    "password_hash": "scrypt:32768:8:1$gLlZcBlSR2jc5g8G$c6d3cc7dbeb45e08c5aa1fe6a1cf5c80837268e2d5f77bbb5873c2c2cc177dc07f0a40a684d771f912306cf33f22501437bff908ab41f107acc8b6f6cb505eb9",
+    "role": "farmer",
+    "language": "en"
+  },
+  {
+    "id": 3,
+    "name": "Nityarag Kunuku",
+    "email": "nityaragkunuku@gmail.com",
+    "password_hash": "scrypt:32768:8:1$CgecXQjZO82N0abv$162ab569dee31cb134f185e964f8b029b8ca4f0130cb0e521e7ff4577a378611937017d272b94deccdcf12d479b27e7202996d11478ff8d6e34bf0799eac52a7",
+    "role": "farmer",
+    "language": "en"
+  },
+  {
+    "id": 4,
+    "name": "dgfdbgfnd",
+    "email": "hgfyhfghngfn",
+    "password_hash": "scrypt:32768:8:1$2mwxDNIZvMebWots$24f3783e3f9ac6c4dfb35fc30b1fda8c96a15d30b3765a1f0b33a2608d7c44c7fa1337ff3bf73805e10eac7b36e406202a84945d606d49f9b67ff4ce9490b5f0",
+    "role": "farmer",
+    "language": "en"
+  },
+  {
+    "id": 5,
+    "name": "guig",
+    "email": "kjnjbygy",
+    "password_hash": "scrypt:32768:8:1$l4hKqThge1Vq28SQ$5062c96b8fe7c35023c11fd3334538b7e8f8206d2d47e170c829e57412eef92d6697b3a8f1fdf13637f8e7ae984a2ca0fb9a3a5d1bbde56e0988d80179f543b1",
+    "role": "farmer",
+    "language": "en"
+  },
+  {
+    "id": 6,
+    "name": "kjhgiu",
+    "email": "hiouyo8uiou9",
+    "password_hash": "scrypt:32768:8:1$kXdXPd7A6cXQwC2P$c39a7df1667755f1c026cb067aa21b9fb77babad210d1fbca5a3d374929fb94591e6e93da3ffe8a207bc674263c2bfd76017f4ae82007da79eccb51d1df46c8e",
+    "role": "farmer",
+    "language": "en"
+  },
+  {
+    "id": 7,
+    "name": "fdmfsdfgg",
+    "email": "ggdfgfdg",
+    "password_hash": "scrypt:32768:8:1$B5bfvswk80DBmBn7$5dce1d7c36d3668f65819bbc4647673ff09380758c259689e49f383ba2f7182f5f181c484774463709595fcb96da1d009f72a8ee66fcbe87e9ca0ef880543e46",
+    "role": "farmer",
+    "language": "en"
+  },
+  {
+    "id": 8,
+    "name": "tythyj",
+    "email": "dghdgfhfgjfjfd",
+    "password_hash": "scrypt:32768:8:1$Z0gLo7sThVATwpdV$11600b3ab0448fce2d8ef1e740bf6d37455037f4bd2d2ae3fa536307394e68c4dc8fef2b405f6effc975ca8a466f5f73297cf55dfcc79b873f69820bd4313dc3",
+    "role": "farmer",
+    "language": "en"
+  },
+  {
+    "id": 9,
+    "name": "ytytrytjhfh",
+    "email": "htrhgjhgjhggjtjhh",
+    "password_hash": "scrypt:32768:8:1$r2vR7F1CIkKaQwDF$220591e1113409f27a35e5b4abaf9ebe005d98a695637d74c39f5572a30ce9332eb18dc554bbda59724fbd5f628e36136d8b084c6a785f54f28cb95cd5fcfcfb",
+    "role": "farmer",
+    "language": "en"
+  }
+]

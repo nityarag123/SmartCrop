@@ -1,0 +1,63 @@
+/* ============================================================
+   SMARTCROP — responsive layout (mobile-first support)
+   ============================================================ */
+
+/* Tablets & small laptops */
+@media (max-width: 900px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-5 { grid-template-columns: repeat(3, 1fr); }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-grid > .card { position: static; }
+  .toolbar { grid-template-columns: 1fr 1fr; }
+  .toolbar .btn-row { grid-column: 1 / -1; }
+  .hero h1 { font-size: 2.2rem; }
+  .site-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .main-nav { display: none; }
+  .nav-toggle { display: inline-flex; }
+  .mobile-nav { display: flex; }
+  body { padding-bottom: 66px; }
+  .site-footer { padding-bottom: 30px; }
+  .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+  .input-row { grid-template-columns: 1fr; }
+  .toolbar { grid-template-columns: 1fr; align-items: stretch; }
+  .toolbar .btn { width: 100%; }
+  .toolbar .btn-row { grid-column: auto; flex-direction: column; }
+  .toolbar .btn-row .btn { width: 100%; }
+  .search-box { width: 100%; }
+  .search-box .btn { display: none; }
+  .page-head { flex-direction: column; align-items: stretch; gap: 14px; }
+  .page-head .search-box, .page-head form { width: 100%; }
+  .hero { padding: 52px 0 64px; }
+  .hero h1 { font-size: 1.9rem; }
+  .section { padding: 34px 0; }
+  .header-inner { gap: 10px; }
+  .brand span.text { font-size: 1.05rem; }
+  .brand small { display: none; }
+  .msg .bubble { max-width: 90%; }
+  .quick-grid { grid-template-columns: repeat(3, 1fr); }
+  .site-footer .footer-grid { grid-template-columns: 1fr; }
+  .hide-sm { display: none; }
+  .chat-shell { height: calc(100vh - 130px); }
+  .stat-row { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .grid-5 { grid-template-columns: repeat(2, 1fr); }
+  .stat-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 400px) {
+  .quick-grid { grid-template-columns: repeat(2, 1fr); }
+  .header-actions .lang-select { display: none; }
+}
+
+/* Larger screens */
+@media (min-width: 721px) {
+  .menu-overlay .menu-panel { display: block; }
+  .only-mobile { display: none; }
+}

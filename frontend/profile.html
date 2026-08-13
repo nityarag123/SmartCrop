@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nav.profile">My Profile — SmartCrop</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-auth="required">
+
+  <header class="site-header" id="site-header"></header>
+
+  <main class="container" style="padding: 28px 0; max-width: 760px;">
+    <div class="page-head">
+      <div>
+        <h1 data-i18n="profile.title">My Profile &amp; Farm Details</h1>
+        <p class="muted" data-i18n="profile.subtitle">Keep your farm information up to date</p>
+      </div>
+    </div>
+
+    <div id="profile-alert"></div>
+    <div id="profile-loading"><div class="spinner"></div></div>
+
+    <form id="profile-form" class="hidden">
+      <div class="card" style="margin-bottom:16px;">
+        <h3 data-i18n="profile.personal">Personal details</h3>
+        <div class="grid grid-2" style="gap:14px;">
+          <div class="form-group"><label for="p-name" data-i18n="auth.fullName">Full name</label><input class="input" id="p-name" type="text"></div>
+          <div class="form-group"><label for="p-phone">Phone</label><input class="input" id="p-phone" type="tel" placeholder="+91…"></div>
+          <div class="form-group"><label for="p-email">Email <span class="muted">(read only)</span></label><input class="input" id="p-email" type="email" disabled></div>
+          <div class="form-group"><label for="p-language" data-i18n="auth.lang">Preferred language</label>
+            <select class="input" id="p-language">
+              <option value="en">English</option>
+              <option value="hi">हिन्दी</option>
+              <option value="te">తెలుగు</option>
+              <option value="ta">தமிழ்</option>
+              <option value="gu">ગુજરાતી</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px;">
+        <div class="flex-between" style="margin-bottom:8px;">
+          <h3 style="margin:0;" data-i18n="profile.location">Location</h3>
+          <button class="btn btn-outline btn-sm" type="button" id="loc-detect" data-i18n="auth.detectLocation">📍 Detect</button>
+        </div>
+        <div class="grid grid-2" style="gap:14px;">
+          <div class="form-group"><label for="p-location" data-i18n="auth.location">Village / City</label><input class="input" id="p-location" type="text"></div>
+          <div class="form-group"><label for="p-state">State</label><input class="input" id="p-state" type="text"></div>
+          <div class="form-group"><label for="p-district">District</label><input class="input" id="p-district" type="text"></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px;">
+        <h3 data-i18n="profile.farm">Farm details</h3>
+        <div class="grid grid-2" style="gap:14px;">
+          <div class="form-group"><label for="p-farm-size">Farm size <span class="muted">(acres/hectares)</span></label><input class="input" id="p-farm-size" type="text" placeholder="e.g. 2 acres"></div>
+          <div class="form-group"><label for="p-crop">Current crop</label><input class="input" id="p-crop" type="text" placeholder="e.g. rice"></div>
+          <div class="form-group"><label for="p-soil-info">Soil info <span class="muted">(e.g. N=45, P=30, K=40, pH=6.5)</span></label><input class="input" id="p-soil-info" type="text"></div>
+          <div class="form-group"><label for="p-irrigation">Irrigation</label>
+            <select class="input" id="p-irrigation">
+              <option value="">Select…</option>
+              <option value="rainfed">Rainfed</option>
+              <option value="canal">Canal</option>
+              <option value="borewell">Borewell</option>
+              <option value="drip">Drip</option>
+              <option value="sprinkler">Sprinkler</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block btn-lg" type="submit" id="profile-save" data-i18n="common.save">Save</button>
+    </form>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/geo.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

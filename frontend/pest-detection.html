@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nav.pest">Pest Detection — SmartCrop</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-auth="required">
+
+  <header class="site-header" id="site-header"></header>
+
+  <main class="container" style="padding: 28px 0;">
+    <div class="page-head">
+      <div>
+        <h1 data-i18n="pest.title">Pest &amp; Disease Detection</h1>
+        <p class="muted" data-i18n="pest.subtitle">Upload a clear photo of the affected plant part</p>
+      </div>
+    </div>
+
+    <div class="work-grid">
+      <div class="card">
+        <h3 data-i18n="pest.upload">Upload a photo</h3>
+        <div id="pest-alert"></div>
+        <form id="pest-form">
+          <div class="drop-zone" id="drop-zone">
+            <div class="dz-content">
+              <span style="font-size:3rem;">📷</span>
+              <p data-i18n="pest.dropHint">Click or drag an image here</p>
+              <p class="muted small" data-i18n="pest.formats">JPG / PNG, clear and well-lit</p>
+            </div>
+            <input type="file" id="pest-image" accept="image/*" hidden>
+          </div>
+          <div id="pest-preview" class="hidden" style="margin:10px 0;text-align:center;">
+            <img id="pest-preview-img" alt="Selected image" style="max-height:180px;border-radius:12px;">
+            <p class="muted small" id="pest-file-name"></p>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit" id="pest-btn" data-i18n="pest.detectBtn">Detect Pest / Disease</button>
+        </form>
+        <p class="muted small mt-2" data-i18n="pest.note">Analysis is done by an AI model trained on pest images. Results are guidance only — for serious outbreaks, contact your agriculture officer.</p>
+      </div>
+
+      <div class="work-results" id="pest-result"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pest.js"></script>
+</body>
+</html>

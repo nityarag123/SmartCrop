@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="fade-in">
+  <!-- Welcome Section -->
+  <div class="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl p-8 mb-8 shadow-lg">
+    <div class="flex items-center justify-between">
+      <div>
+        <h1 class="text-3xl font-bold mb-2">Welcome back, Farmer!</h1>
+        <p class="text-green-100">Here's your farm overview and quick actions.</p>
+      </div>
+      <div class="hidden md:block">
+        <i class="fas fa-tractor text-6xl text-green-200"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Dashboard Grid -->
+  <div class="grid lg:grid-cols-3 gap-8 mb-12">
+    <!-- Farm Snapshot Card -->
+    <div class="lg:col-span-2 card p-8">
+      <div class="flex items-center mb-6">
+        <i class="fas fa-chart-line text-green-600 text-2xl mr-3"></i>
+        <h3 class="text-2xl font-bold text-gray-800">Your Farm Snapshot</h3>
+      </div>
+      <div id="weatherCard" class="bg-gray-50 rounded-lg p-4 mb-6">
+        <div class="flex items-center">
+          <i class="fas fa-cloud-sun text-blue-500 text-xl mr-3"></i>
+          <span class="text-gray-600">Loading weather data...</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-4">
+        <a href="/upload-pest" class="btn-primary flex items-center">
+          <i class="fas fa-bug mr-2"></i>
+          Detect Pest
+        </a>
+        <button id="get-ai-recommendation" class="btn-secondary flex items-center" type="button">
+          <i class="fas fa-lightbulb mr-2"></i>
+          Get AI Recommendation
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Actions Card -->
+    <div class="card p-8">
+      <div class="flex items-center mb-6">
+        <i class="fas fa-bolt text-yellow-500 text-2xl mr-3"></i>
+        <h3 class="text-2xl font-bold text-gray-800">Quick Actions</h3>
+      </div>
+      <div class="space-y-4">
+        <a href="/profile" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+          <i class="fas fa-user text-blue-500 mr-3"></i>
+          <span class="font-medium">Edit Profile</span>
+        </a>
+        <a href="/farm-management" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+          <i class="fas fa-cogs text-purple-500 mr-3"></i>
+          <span class="font-medium">Farm Settings</span>
+        </a>
+        <a href="/analytics" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+          <i class="fas fa-chart-bar text-green-500 mr-3"></i>
+          <span class="font-medium">View Analytics</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature Cards Grid -->
+  <div class="dashboard-grid">
+    <a href="/analytics" class="feature-card">
+      <i class="fas fa-chart-pie text-3xl mb-4"></i>
+      <h4>Analytics Dashboard</h4>
+      <p>View farm yield, revenue, and goals with detailed insights.</p>
+    </a>
+    <a href="/weather" class="feature-card">
+      <i class="fas fa-cloud-sun-rain text-3xl mb-4"></i>
+      <h4>Weather Forecast</h4>
+      <p>Get accurate weather predictions for better planning.</p>
+    </a>
+    <a href="/crop-calendar" class="feature-card">
+      <i class="fas fa-calendar-alt text-3xl mb-4"></i>
+      <h4>Crop Calendar</h4>
+      <p>Plan your farming activities with seasonal guidance.</p>
+    </a>
+    <a href="/soil-analysis" class="feature-card">
+      <i class="fas fa-flask text-3xl mb-4"></i>
+      <h4>Soil Analysis</h4>
+      <p>Analyze soil nutrients and pH levels for optimal growth.</p>
+    </a>
+    <a href="/market-prices" class="feature-card">
+      <i class="fas fa-tags text-3xl mb-4"></i>
+      <h4>Market Prices</h4>
+      <p>Stay updated with current crop prices and market trends.</p>
+    </a>
+    <a href="/farm-management" class="feature-card">
+      <i class="fas fa-tractor text-3xl mb-4"></i>
+      <h4>Kisan Mitra</h4>
+      <p>Manage your farm profile, crops, and resources efficiently.</p>
+    </a>
+  </div>
+
+  <!-- Recommendation Modal -->
+  <div id="recommendationModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-6 max-w-md w-full shadow-lg">
+      <h3 class="text-xl font-bold mb-4">AI Recommendation</h3>
+      <div id="recommendationContent" class="mb-4"></div>
+      <button id="closeRecommendation" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Close</button>
+    </div>
+  </div>
+
+  <!-- Chatbot Sidebar -->
+  <div id="chatbot-sidebar" class="fixed top-0 right-0 h-full w-96 bg-white shadow-lg border-l border-gray-200 z-50 transform translate-x-full transition-transform duration-300">
+    <div class="bg-green-600 text-white p-4 flex items-center justify-between">
+      <h3 class="font-bold">Farm Assistant</h3>
+      <button id="close-chatbot" class="text-white hover:text-gray-200">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="p-4 h-[calc(100%-96px)] flex flex-col" id="chat-container">
+      <div id="chat-messages" class="flex-grow overflow-y-auto mb-4 max-h-[calc(100%-120px)]">
+        <div class="bg-gray-100 p-3 rounded-lg mb-2">
+          <p class="text-sm">Hello! I'm your farm assistant. How can I help you today?</p>
+        </div>
+      </div>
+      <div class="border-t pt-2">
+        <div class="flex mb-2">
+          <select id="chat-language" class="border border-gray-300 rounded-l px-3 py-2 text-sm">
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+            <option value="te">తెలుగు</option>
+            <option value="ta">தமிழ்</option>
+            <option value="kn">ಕನ್ನಡ</option>
+          </select>
+          <button id="voice-input" class="bg-blue-500 text-white px-3 py-2 border-l border-blue-600">
+            <i class="fas fa-microphone"></i>
+          </button>
+        </div>
+        <div class="flex">
+          <input type="text" id="chat-input" class="flex-1 border border-gray-300 rounded-l px-3 py-2 text-sm" placeholder="Type your message...">
+          <button id="send-message" class="bg-green-600 text-white px-4 py-2 rounded-r hover:bg-green-700 transition-colors">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Removed open chatbot sidebar button as per user request -->
+  <!-- <button id="open-chatbot-sidebar" class="fixed bottom-6 right-6 z-50 bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-green-700 transition-colors">
+    <i class="fas fa-comments text-2xl"></i>
+  </button> -->
+
+  <script src="/static/js/chatbot.js"></script>
+  <script>
+    // Remove event listener that prevents default navigation on btn-secondary links
+    // This allows normal anchor tag navigation for "Get AI Recommendation"
+  </script>
+{% endblock %}

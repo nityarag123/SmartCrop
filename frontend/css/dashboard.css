@@ -1,0 +1,51 @@
+/* ============================================================
+   SMARTCROP — dashboard
+   ============================================================ */
+
+.dash-hero {
+  background:
+    radial-gradient(700px 320px at 85% -20%, rgba(93, 189, 130, 0.4), transparent 60%),
+    linear-gradient(135deg, var(--green-900), var(--green-700) 60%, var(--green-600));
+  color: #fff; padding: 34px 0 90px; border-radius: 0 0 26px 26px;
+}
+.dash-hero h1 { color: #fff; margin-bottom: 6px; }
+.dash-hero .sub { color: #cfe7d8; }
+.dash-hero .welcome-chip { display:inline-block; background: rgba(255,255,255,.16); padding: 6px 14px; border-radius: 999px; margin-bottom: 12px; font-weight:700; font-size: .92rem; }
+
+.dash-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+  margin-top: -55px; padding-bottom: 30px;
+}
+.dash-tile {
+  background: #fff; border-radius: var(--radius-md); border: 1px solid var(--line);
+  box-shadow: var(--shadow); padding: 22px 18px; display: flex; flex-direction: column;
+  text-decoration: none; color: inherit;
+  transition: transform .15s ease, box-shadow .15s ease; position: relative; overflow: hidden;
+}
+.dash-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.dash-tile .dt-ico {
+  width: 48px; height: 48px; flex: none; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--green-50); border: 1px solid var(--green-100); border-radius: 12px;
+  font-size: 1.5rem; margin-bottom: 12px;
+}
+.dash-tile h3 { font-size: 1.02rem; margin-bottom: 4px; }
+.dash-tile p { margin: 0 0 10px; font-size: .85rem; color: var(--muted); }
+.dash-tile .dt-arrow { position: absolute; top: 16px; right: 16px; color: var(--green-500); font-weight: 800; }
+.dash-tile .weather-mini { margin-top: auto; }
+
+.dash-recent { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow); padding: 22px; }
+.dash-recent h2 { font-size: 1.15rem; margin-bottom: 16px; }
+.recent-row { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px dashed var(--line); align-items: flex-start; }
+.recent-row:last-child { border-bottom: none; }
+.recent-row .rr-ico { font-size: 1.3rem; }
+.recent-row .rr-text { flex: 1; }
+.recent-row .rr-text b { display: block; font-size: .95rem; }
+.recent-row .rr-text span { color: var(--muted); font-size: .82rem; }
+.recent-row .rr-time { color: var(--muted); font-size: .78rem; white-space: nowrap; }
+
+.stat-pill { display:inline-flex; align-items:center; gap:6px; background: var(--green-100); color: var(--green-800); border-radius: 999px; padding: 6px 14px; font-weight:700; font-size:.85rem; margin: 6px 6px 0 0; }
+.weather-mini { background: var(--green-50); border-radius: var(--radius-sm); padding: 14px; margin-top: 14px; }
+
+@media (max-width: 1100px) { .dash-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) { .dash-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+@media (max-width: 480px) { .dash-grid { grid-template-columns: 1fr; } }

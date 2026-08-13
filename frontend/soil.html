@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nav.soil">Soil Analysis — SmartCrop</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-auth="required">
+
+  <header class="site-header" id="site-header"></header>
+
+  <main class="container" style="padding: 28px 0;">
+    <div class="page-head">
+      <div>
+        <h1 data-i18n="soil.title">Soil Health Analysis</h1>
+        <p class="muted" data-i18n="soil.subtitle">Enter your soil test values for a quick health check</p>
+      </div>
+    </div>
+
+    <div class="work-grid">
+      <div class="card">
+        <h3 data-i18n="soil.enterValues">Enter soil test values</h3>
+        <div id="soil-alert"></div>
+        <form id="soil-form">
+          <div class="form-group"><label for="nitrogen">Nitrogen (N) <span class="muted">kg/ha</span></label><input class="input" type="number" id="nitrogen" step="any" placeholder="e.g. 25" value="25"></div>
+          <div class="form-group"><label for="phosphorus">Phosphorus (P) <span class="muted">kg/ha</span></label><input class="input" type="number" id="phosphorus" step="any" placeholder="e.g. 15" value="15"></div>
+          <div class="form-group"><label for="potassium">Potassium (K) <span class="muted">kg/ha</span></label><input class="input" type="number" id="potassium" step="any" placeholder="e.g. 30" value="30"></div>
+          <div class="form-group"><label for="ph">Soil pH</label><input class="input" type="number" id="ph" step="0.1" min="0" max="14" placeholder="e.g. 7.0" value="7.0"></div>
+          <div class="form-group"><label for="moisture">Moisture % <span class="muted">optional</span></label><input class="input" type="number" id="moisture" step="any" min="0" max="100" placeholder="e.g. 50" value="50"></div>
+          <button class="btn btn-primary btn-block" type="submit" id="soil-btn" data-i18n="common.analyze">Analyze Soil</button>
+        </form>
+
+        <div class="divider"></div>
+        <h4 data-i18n="soil.uploadAlt">Or upload a soil photo</h4>
+        <p class="muted small" data-i18n="soil.uploadNote">Photo gives a quick visual estimate of soil type and fertility — a lab test is needed for exact NPK/pH.</p>
+        <form id="soil-image-form">
+          <input class="input" type="file" id="soil-image" accept="image/*" style="margin-bottom:10px;">
+          <button class="btn btn-outline btn-block" type="submit" id="soil-img-btn" data-i18n="soil.uploadBtn">Analyze Soil Photo</button>
+        </form>
+      </div>
+
+      <div class="work-results">
+        <div id="soil-result"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/soil.js"></script>
+</body>
+</html>

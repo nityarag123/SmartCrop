@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nav.schemes">Government Schemes — SmartCrop</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-auth="required">
+
+  <header class="site-header" id="site-header"></header>
+
+  <main class="container" style="padding: 28px 0;">
+    <div class="page-head">
+      <div>
+        <h1 data-i18n="schemes.title">Government Schemes</h1>
+        <p class="muted" data-i18n="schemes.subtitle">Subsidies, insurance, credit and support for farmers</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="toolbar">
+        <div class="form-group">
+          <label for="s-q" data-i18n="schemes.search">Search</label>
+          <input class="input" id="s-q" data-i18n="schemes.searchPh" placeholder="e.g. insurance, credit, organic…">
+        </div>
+        <div class="form-group">
+          <label for="s-cat" data-i18n="schemes.category">Category</label>
+          <select class="input" id="s-cat">
+            <option value="">All categories</option>
+            <option value="central">Central</option>
+            <option value="state">State</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" id="s-search" data-i18n="common.search">Search</button>
+      </div>
+    </div>
+
+    <div id="schemes-alert"></div>
+    <div class="grid grid-2" id="schemes-list">
+      <div class="card" style="text-align:center;"><span class="spinner"></span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/schemes.js"></script>
+</body>
+</html>

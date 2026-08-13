@@ -1,0 +1,1124 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Test Farmer",
+      "email": "test@smartcrop.in",
+      "phone": "9876543210",
+      "password_hash": "scrypt:32768:8:1$xA97ub2rLprbKdz3$1c26569dcd2fcd5ac58c7816f55b61e592a2667af387afaab7f23de0ccfbb34935514a9a07c627cd2e89ebc1eb9cf7967776c9e494dade94603bd465008d0ae9",
+      "location": "Pune",
+      "state": "Maharashtra",
+      "district": "Pune",
+      "language": "en",
+      "role": "farmer",
+      "farm_size": "2 acres",
+      "soil_info": "loam",
+      "current_crop": "wheat",
+      "irrigation": "drip",
+      "_id": "0934d6d7-f5fe-40ae-a7cc-d39c6bc52cd6",
+      "created_at": "2026-08-13T10:52:30Z",
+      "updated_at": "2026-08-13T10:54:07Z"
+    },
+    {
+      "id": 2,
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "phone": "",
+      "password_hash": "scrypt:32768:8:1$fUhWuj6JvSO1CXp5$d3d5fa8813e7e80fc7f5e4339d7f615b3c9a89ad81db82d33adb9b362489e14c25712ea9eab65af86bd673528babe1dedbffb67e5e47ef948014b594e4d33d36",
+      "location": "Tanuku",
+      "state": "",
+      "district": "",
+      "language": "en",
+      "role": "farmer",
+      "farm_size": "",
+      "soil_info": "",
+      "current_crop": "",
+      "irrigation": "",
+      "_id": "b2899f10-b660-459b-bf1b-e169779087f4",
+      "created_at": "2026-08-13T11:06:30Z"
+    },
+    {
+      "id": 3,
+      "name": "Geo Test",
+      "email": "geo_639222361961576498@test.in",
+      "phone": "",
+      "password_hash": "scrypt:32768:8:1$6sdqlJa88BfYNmcY$e208382380abdd5ec6b12587a7e725ac3e4880825f21af8634c89712cbb09e9bb6af8027dc2401dd5e27439a3e0ae238bdc454a61fcf9bdbcecc21d659f3e4ae",
+      "location": "Pune",
+      "state": "Maharashtra",
+      "district": "Pune",
+      "language": "en",
+      "role": "farmer",
+      "farm_size": "",
+      "soil_info": "",
+      "current_crop": "",
+      "irrigation": "",
+      "_id": "467c4265-5dcc-4a97-a6b3-072a63456450",
+      "created_at": "2026-08-13T11:13:16Z"
+    },
+    {
+      "id": 4,
+      "name": "No Loc",
+      "email": "noloc_639222362064524034@test.in",
+      "phone": "",
+      "password_hash": "scrypt:32768:8:1$yIEiEMh3wTQBWFti$bae600e8a1877277ebd7155c5b096b28f9af873a534e45822b3c53c8327835b9c9ce14998f0e7a1688185e80f5551f828d0e6e05f01a2215b0f75f4eaa010797",
+      "location": "",
+      "state": "",
+      "district": "",
+      "language": "en",
+      "role": "farmer",
+      "farm_size": "",
+      "soil_info": "",
+      "current_crop": "",
+      "irrigation": "",
+      "_id": "6231390b-ec33-4c92-a0e9-22c9b1f48a43",
+      "created_at": "2026-08-13T11:13:26Z"
+    },
+    {
+      "id": 5,
+      "name": "abc",
+      "email": "abc@gmail.vom",
+      "phone": "",
+      "password_hash": "scrypt:32768:8:1$cEBA2rEQN8OOqEvN$9fadc19c8645c2e31e57b44953dd5adb45bd82e7f1669fadc3c00dd26549e0ee7722a79bf1db7432ecf9671c9d491812a9fc45080a328a13a0af5ea5f2d322f2",
+      "location": "Vaghodia, Gujarat, India",
+      "state": "Gujarat",
+      "district": "Vaghodia",
+      "language": "en",
+      "role": "farmer",
+      "farm_size": "",
+      "soil_info": "",
+      "current_crop": "",
+      "irrigation": "",
+      "_id": "f3a4eaf2-e51b-4403-9dba-26a20b8f99e1",
+      "created_at": "2026-08-13T11:19:11Z"
+    }
+  ],
+  "farms": [],
+  "chat_history": [
+    {
+      "user_id": 1,
+      "message": "How do I grow rice?",
+      "response": "Rice grows best in warm, humid conditions (25-35 C) in soil that holds water. It needs lots of water â€” transplant seedlings into a flooded field and split nitrogen in three doses (transplanting, tillering, panicle initiation). Harvest about 120-140 days after sowing.",
+      "language": "en",
+      "engine": "knowledge-base",
+      "_id": "c14b3371-49b4-4c6d-8394-c10a36f890f9",
+      "created_at": "2026-08-13T10:53:56Z"
+    },
+    {
+      "user_id": 1,
+      "message": "What is PM-KISAN?",
+      "response": "Popular central schemes: PM-KISAN (Rs 6,000/year income support), PMFBY (crop insurance), Kisan Credit Card (cheap crop loans), PMKSY (irrigation support), Soil Health Card (free soil testing). See the Schemes page in SmartCrop for full details and the official websites to apply. State schemes differ by state â€” ask your district agriculture office.",
+      "language": "en",
+      "engine": "knowledge-base",
+      "_id": "aaec3f77-558d-48e6-8347-a25c8f0e5f4d",
+      "created_at": "2026-08-13T11:02:55Z"
+    },
+    {
+      "user_id": 1,
+      "message": "How do I treat aphids?",
+      "response": "I'm not sure about that one. I'm a farming assistant â€” I can help with crops, soil, pests, weather planning, market prices and government schemes. For example, try 'How do I grow rice?' or 'Which crop suits my soil?'. For serious crop problems, contact your local agriculture officer. The farmer is located in Pune. They are currently growing rice. Farm size is 2.5 acres.",
+      "language": "en",
+      "engine": "knowledge-base",
+      "_id": "ba7fc113-4cf5-4a7a-9fef-09101283a5c9",
+      "created_at": "2026-08-13T11:04:35Z"
+    },
+    {
+      "user_id": 5,
+      "message": "What is the best crop for this season?",
+      "response": "The best crop depends on your soil nutrients, pH, temperature and rainfall. Enter these in the Crop Recommendation page and SmartCrop's AI model will suggest the best crop for your conditions.",
+      "language": "en",
+      "engine": "knowledge-base",
+      "_id": "36ab2a7c-5d67-43d8-a9c5-9f8c945c7d71",
+      "created_at": "2026-08-13T11:24:02Z"
+    },
+    {
+      "user_id": 5,
+      "message": "Symptoms of nitrogen deficiency",
+      "response": "I'm not sure about that one. I'm a farming assistant â€” I can help with crops, soil, pests, weather planning, market prices and government schemes. For example, try 'How do I grow rice?' or 'Which crop suits my soil?'. For serious crop problems, contact your local agriculture officer. The farmer is located in Vaghodia, Gujarat, India.",
+      "language": "en",
+      "engine": "knowledge-base",
+      "_id": "e30dbeff-13b1-42f7-ac8b-31be980f9ce7",
+      "created_at": "2026-08-13T11:24:06Z"
+    },
+    {
+      "user_id": 5,
+      "message": "Current market price of wheat",
+      "response": "I can't guarantee live prices from memory. Open the Market Prices page in SmartCrop to see current sample prices and trends, and compare rates at your nearest mandi before selling. e-NAM gives live, transparent prices from connected mandis.",
+      "language": "en",
+      "engine": "knowledge-base",
+      "_id": "6b907abb-aa9c-45c8-b822-9b697544ab3e",
+      "created_at": "2026-08-13T11:24:08Z"
+    }
+  ],
+  "soil_reports": [
+    {
+      "user_id": 1,
+      "engine": "soil-health-guidance",
+      "overall": "Fair â€” improve before major crops",
+      "ph": {
+        "value": 6.0,
+        "label": "Ideal",
+        "status": "medium",
+        "percent": 0
+      },
+      "nitrogen": {
+        "value": 20.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 67
+      },
+      "phosphorus": {
+        "value": 15.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "potassium": {
+        "value": 25.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 83
+      },
+      "_id": "488ea2b0-b2f8-4b34-b6f6-41200aefe93d",
+      "created_at": "2026-08-13T10:53:41Z"
+    },
+    {
+      "user_id": 1,
+      "engine": "soil-health-guidance",
+      "overall": "Fair â€” improve before major crops",
+      "ph": {
+        "value": 5.8,
+        "label": "Acidic",
+        "status": "low",
+        "percent": 97
+      },
+      "nitrogen": {
+        "value": 20.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 67
+      },
+      "phosphorus": {
+        "value": 15.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "potassium": {
+        "value": 30.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "_id": "cb003762-3659-4678-95fc-9c0be1d85b32",
+      "created_at": "2026-08-13T11:04:35Z"
+    },
+    {
+      "user_id": 5,
+      "engine": "soil-health-guidance",
+      "overall": "Good â€” minor corrections needed",
+      "ph": {
+        "value": 7.0,
+        "label": "Ideal",
+        "status": "medium",
+        "percent": 67
+      },
+      "nitrogen": {
+        "value": 25.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 83
+      },
+      "phosphorus": {
+        "value": 15.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "potassium": {
+        "value": 30.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "_id": "c1835d2b-a32a-42f3-b4b0-793d4017a618",
+      "created_at": "2026-08-13T11:21:45Z"
+    },
+    {
+      "user_id": 5,
+      "engine": "soil-health-guidance",
+      "overall": "Good â€” minor corrections needed",
+      "ph": {
+        "value": 7.0,
+        "label": "Ideal",
+        "status": "medium",
+        "percent": 67
+      },
+      "nitrogen": {
+        "value": 25.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 83
+      },
+      "phosphorus": {
+        "value": 15.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "potassium": {
+        "value": 30.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "_id": "3a2e737b-10d6-4e6c-8e91-ab5cb64951ca",
+      "created_at": "2026-08-13T11:21:55Z"
+    },
+    {
+      "user_id": 5,
+      "engine": "soil-health-guidance",
+      "overall": "Good â€” minor corrections needed",
+      "ph": {
+        "value": 7.0,
+        "label": "Ideal",
+        "status": "medium",
+        "percent": 67
+      },
+      "nitrogen": {
+        "value": 25.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 83
+      },
+      "phosphorus": {
+        "value": 15.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "potassium": {
+        "value": 30.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "_id": "26100ee3-6050-4d1e-95c7-82e924e76e81",
+      "created_at": "2026-08-13T11:22:20Z"
+    },
+    {
+      "user_id": 5,
+      "engine": "soil-health-guidance",
+      "overall": "Good — minor corrections needed",
+      "ph": {
+        "value": 7.0,
+        "label": "Ideal",
+        "status": "medium",
+        "percent": 67
+      },
+      "nitrogen": {
+        "value": 25.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 83
+      },
+      "phosphorus": {
+        "value": 15.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "potassium": {
+        "value": 30.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "_id": "99831bc6-cd71-4e5b-90a8-db8ba300c75d",
+      "created_at": "2026-08-13T14:55:13Z"
+    },
+    {
+      "user_id": 5,
+      "engine": "soil-health-guidance",
+      "overall": "Fair — improve before major crops",
+      "ph": {
+        "value": 7.2,
+        "label": "Ideal",
+        "status": "medium",
+        "percent": 80
+      },
+      "nitrogen": {
+        "value": 28.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 93
+      },
+      "phosphorus": {
+        "value": 16.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 4
+      },
+      "potassium": {
+        "value": 11.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 37
+      },
+      "_id": "a206c922-df63-4579-9ea4-b10ca2682afe",
+      "created_at": "2026-08-13T15:31:18Z"
+    }
+  ],
+  "crop_recommendations": [
+    {
+      "user_id": 1,
+      "inputs": {
+        "nitrogen": 90.0,
+        "phosphorus": 42.0,
+        "potassium": 43.0,
+        "ph": 6.5,
+        "temperature": 25.5,
+        "humidity": 80.0,
+        "rainfall": 220.0
+      },
+      "crop": "Rice",
+      "confidence": 55.0,
+      "engine": "rule-based",
+      "_id": "e385058c-f76e-401f-ac30-a22567826d50",
+      "created_at": "2026-08-13T10:52:44Z"
+    },
+    {
+      "user_id": 1,
+      "inputs": {
+        "temperature": 25.5,
+        "humidity": 80.0,
+        "rainfall": 220.0,
+        "ph": 6.5,
+        "nitrogen": 90.0,
+        "phosphorus": 42.0,
+        "potassium": 43.0
+      },
+      "crop": "Rice",
+      "confidence": 83.3,
+      "engine": "ML",
+      "_id": "2141f063-4a17-41cd-8fb4-8b99db0b1e8c",
+      "created_at": "2026-08-13T10:53:40Z"
+    },
+    {
+      "user_id": 1,
+      "inputs": {
+        "temperature": 28.0,
+        "humidity": 65.0,
+        "rainfall": 120.0,
+        "ph": 6.5,
+        "nitrogen": 45.0,
+        "phosphorus": 35.0,
+        "potassium": 40.0
+      },
+      "crop": "Mango",
+      "confidence": 48.0,
+      "engine": "ML",
+      "_id": "9ebebf00-3e0d-4a31-9e3f-0e5172563137",
+      "created_at": "2026-08-13T11:04:35Z"
+    },
+    {
+      "user_id": 2,
+      "inputs": {
+        "temperature": 27.0,
+        "humidity": 65.0,
+        "rainfall": 120.0,
+        "ph": 6.5,
+        "nitrogen": 45.0,
+        "phosphorus": 35.0,
+        "potassium": 40.0
+      },
+      "crop": "Mango",
+      "confidence": 37.3,
+      "engine": "ML",
+      "_id": "bc54f6bd-b6bb-427b-8fdb-5f16b1165125",
+      "created_at": "2026-08-13T11:08:01Z"
+    },
+    {
+      "user_id": 5,
+      "inputs": {
+        "temperature": 28.0,
+        "humidity": 65.0,
+        "rainfall": 120.0,
+        "ph": 6.5,
+        "nitrogen": 45.0,
+        "phosphorus": 35.0,
+        "potassium": 40.0
+      },
+      "crop": "Mango",
+      "confidence": 48.0,
+      "engine": "ML",
+      "_id": "e0addb4e-7dca-423d-9370-023fece24442",
+      "created_at": "2026-08-13T11:21:35Z"
+    },
+    {
+      "user_id": 1,
+      "inputs": {
+        "temperature": 28.0,
+        "humidity": 65.0,
+        "rainfall": 120.0,
+        "ph": 6.5,
+        "nitrogen": 45.0,
+        "phosphorus": 35.0,
+        "potassium": 40.0
+      },
+      "crop": "Mango",
+      "confidence": 48.0,
+      "engine": "ML",
+      "_id": "45593a46-8d11-40f3-8759-14a34ae898a1",
+      "created_at": "2026-08-13T11:22:25Z"
+    },
+    {
+      "user_id": 5,
+      "inputs": {
+        "temperature": 29.0,
+        "humidity": 66.0,
+        "rainfall": 120.0,
+        "ph": 6.5,
+        "nitrogen": 45.0,
+        "phosphorus": 35.0,
+        "potassium": 40.0
+      },
+      "crop": "Mango",
+      "confidence": 48.0,
+      "engine": "ML",
+      "_id": "0617fd46-61ce-4fa0-85be-072180b8ead7",
+      "created_at": "2026-08-13T11:24:45Z"
+    },
+    {
+      "user_id": 5,
+      "inputs": {
+        "temperature": 30.0,
+        "humidity": 66.0,
+        "rainfall": 0.0,
+        "ph": 6.5,
+        "nitrogen": 45.0,
+        "phosphorus": 35.0,
+        "potassium": 40.0
+      },
+      "crop": "Muskmelon",
+      "confidence": 38.0,
+      "engine": "ML",
+      "_id": "a55f409a-5aff-436d-a7c8-002ffe7620e1",
+      "created_at": "2026-08-13T11:40:36Z"
+    },
+    {
+      "user_id": 5,
+      "inputs": {
+        "temperature": 27.0,
+        "humidity": 87.0,
+        "rainfall": 0.0,
+        "ph": 6.5,
+        "nitrogen": 45.0,
+        "phosphorus": 35.0,
+        "potassium": 40.0
+      },
+      "crop": "Muskmelon",
+      "confidence": 38.7,
+      "engine": "ML",
+      "_id": "fb9cb357-5588-4c6a-b1a4-8d217d3bd38c",
+      "created_at": "2026-08-13T14:59:49Z"
+    }
+  ],
+  "pest_reports": [
+    {
+      "user_id": 1,
+      "label": "Aphids",
+      "category": "insect pest",
+      "confidence": 0.96,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "34fca075-2571-408f-8127-35e3dc534d3f",
+      "created_at": "2026-08-13T10:53:51Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Aphids",
+      "category": "insect pest",
+      "confidence": 0.96,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "b59bcd92-5e6e-47ba-ae63-2befb220336c",
+      "created_at": "2026-08-13T11:05:05Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "1020e8da-1d98-4e92-8b2b-ca67cf903a09",
+      "created_at": "2026-08-13T11:22:35Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.4667,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "f3635ece-10e7-487e-b78c-a69bc2c8d54d",
+      "created_at": "2026-08-13T11:41:11Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "88d95981-202e-46cb-82c1-f009533cd31e",
+      "created_at": "2026-08-13T14:54:30Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "c20b1c90-94e2-4fbb-aa8f-fe6dc29c6f66",
+      "created_at": "2026-08-13T14:54:55Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "be21ba8e-1cf0-4019-82ca-0f5dfc9d6636",
+      "created_at": "2026-08-13T14:54:57Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "6e407166-a537-43f6-8fbc-67eb674028a3",
+      "created_at": "2026-08-13T14:54:58Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "20d6039f-b9b5-4724-8ffb-ad40e56641c8",
+      "created_at": "2026-08-13T14:54:58Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "7b415cf1-024b-4187-9bbe-023d96af060b",
+      "created_at": "2026-08-13T14:54:59Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "d1f6eb87-b11c-409f-99ee-8f26338a6809",
+      "created_at": "2026-08-13T14:54:59Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "d11624d8-c272-4c87-aa90-bcef145a9596",
+      "created_at": "2026-08-13T14:54:59Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "265b9da9-2034-47e9-911d-8cb64532da7e",
+      "created_at": "2026-08-13T14:55:00Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "f22f6f7b-a697-4940-82da-d6995739dd81",
+      "created_at": "2026-08-13T14:55:00Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "78385ed9-13b9-441a-8cd7-065437245ea4",
+      "created_at": "2026-08-13T14:55:00Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "e2b221c6-f146-4b61-ac35-102f5387ac37",
+      "created_at": "2026-08-13T14:55:02Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.23,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "f4df7a7f-ba84-4d3a-95c4-4ca85f807c21",
+      "created_at": "2026-08-13T14:55:02Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unknown / unclear image",
+      "category": "unknown",
+      "confidence": 0.21,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "ff8b097b-61e8-4862-a949-351d67798b99",
+      "created_at": "2026-08-13T15:04:05Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Aphids",
+      "category": "insect pest",
+      "confidence": 0.834,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "7784094b-35c5-496a-a17e-dfec6dfb4531",
+      "created_at": "2026-08-13T15:15:42Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Mites",
+      "category": "insect pest",
+      "confidence": 0.382,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "c8a80584-de3a-49a7-af46-d9086d2be025",
+      "created_at": "2026-08-13T15:15:42Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Aphids",
+      "category": "insect pest",
+      "confidence": 0.834,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "cb8a1beb-5ff9-4594-8383-bdd689f78dcc",
+      "created_at": "2026-08-13T15:17:31Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Stem Borer",
+      "category": "insect pest",
+      "confidence": 0.742,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "c711a790-1ffe-415e-a3a2-0035cd4ec847",
+      "created_at": "2026-08-13T15:17:32Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Bollworm",
+      "category": "insect pest",
+      "confidence": 0.638,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "2a157602-816d-480e-b77e-31e27f3f502c",
+      "created_at": "2026-08-13T15:17:32Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Unclear image — not recognised",
+      "category": "unknown",
+      "confidence": 0.382,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "c002a2f2-212b-4366-b07a-cf978f107b19",
+      "created_at": "2026-08-13T15:17:32Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unclear image — not recognised",
+      "category": "unknown",
+      "confidence": 0.222,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "12084c64-0f56-408a-9a90-baa405aee063",
+      "created_at": "2026-08-13T15:31:59Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unclear image — not recognised",
+      "category": "unknown",
+      "confidence": 0.222,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "90e1a044-5c1e-46a8-ad30-a83c8dccc2c0",
+      "created_at": "2026-08-13T15:45:04Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unclear image — not recognised",
+      "category": "unknown",
+      "confidence": 0.222,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "a14bb63f-9cef-45df-bb98-3775670ce7cc",
+      "created_at": "2026-08-13T15:45:12Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unclear image — not recognised",
+      "category": "unknown",
+      "confidence": 0.158,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "03a9af86-cdd4-4fd4-af46-9b7ef35a323c",
+      "created_at": "2026-08-13T15:45:20Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unclear image — not recognised",
+      "category": "unknown",
+      "confidence": 0.158,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "20f35b2f-5064-4c12-a069-039afb0532ab",
+      "created_at": "2026-08-13T15:45:23Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Unclear image — not recognised",
+      "category": "unknown",
+      "confidence": 0.252,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "9a70bfe4-d7dd-4222-bb8a-d81dcc52840d",
+      "created_at": "2026-08-13T15:45:29Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.244,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "c504a3ad-48be-439f-b0f6-d913145dbd99",
+      "created_at": "2026-08-13T15:52:19Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Not a clear plant or pest photo",
+      "category": "unknown",
+      "confidence": 0.292,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "d002f326-02e7-4ab8-8e83-695b4e7b3cc1",
+      "created_at": "2026-08-13T15:52:19Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Aphids",
+      "category": "insect pest",
+      "confidence": 0.834,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "8faf7592-d7c6-47ec-8f15-5a6df14f8d5a",
+      "created_at": "2026-08-13T15:52:19Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Stem Borer",
+      "category": "insect pest",
+      "confidence": 0.742,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "3ea82dba-06ff-42c9-98b3-ebb65e67c4f3",
+      "created_at": "2026-08-13T15:52:19Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.244,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "424da0e2-6513-4f7b-931f-fad86a6fc6e6",
+      "created_at": "2026-08-13T15:52:28Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.222,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "59732922-8d6c-4c27-8b32-17290cca3a3c",
+      "created_at": "2026-08-13T15:53:10Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.158,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "ac92526c-75d0-4088-b986-70375023253b",
+      "created_at": "2026-08-13T15:53:31Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.158,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "5d8c50e2-f832-46f1-8423-24e892646573",
+      "created_at": "2026-08-13T15:53:33Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.158,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "10f67164-3fe8-42cb-be3c-bd5c4b6b5a81",
+      "created_at": "2026-08-13T15:53:34Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.158,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "949e0370-d87f-482f-91fb-a1c28f5b680e",
+      "created_at": "2026-08-13T15:53:35Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.158,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "bf102c25-2211-4360-a7dc-cd47ac487afa",
+      "created_at": "2026-08-13T15:53:36Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.362,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "9c9a4599-0583-4886-9865-2309114edc9d",
+      "created_at": "2026-08-13T16:14:07Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Not a clear plant or pest photo",
+      "category": "unknown",
+      "confidence": 0.218,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "128f20f5-2a66-440e-a817-4ae757cbfe11",
+      "created_at": "2026-08-13T16:14:07Z"
+    },
+    {
+      "user_id": 1,
+      "label": "Not a clear plant or pest photo",
+      "category": "unknown",
+      "confidence": 0.22,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "7b81b3ea-795a-45d1-bb55-6790c3cad7c0",
+      "created_at": "2026-08-13T16:14:07Z"
+    }
+  ],
+  "crop_calendar": [
+    {
+      "user_id": 1,
+      "crop": "wheat",
+      "season": "rabi",
+      "_id": "5b73d6b7-bb14-45b4-a7bf-d1eba5d788a4",
+      "created_at": "2026-08-13T10:53:57Z",
+      "updated_at": "2026-08-13T11:04:35Z"
+    },
+    {
+      "user_id": 5,
+      "crop": "rice",
+      "season": "kharif",
+      "_id": "6566c087-e898-4e3e-a9dd-6235b42348e8",
+      "created_at": "2026-08-13T11:41:49Z"
+    }
+  ],
+  "government_schemes": [
+    {
+      "code": "pm-kisan",
+      "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+      "category": "Central",
+      "summary": "Income support of Rs. 6,000 per year to eligible landholding farmer families.",
+      "benefits": "Rs. 2,000 every 4 months, transferred directly to the bank account.",
+      "eligibility": [
+        "All landholding farmer families with cultivable land",
+        "Exclusions apply (institutional landholders, income-tax payers etc.)"
+      ],
+      "documents": [
+        "Aadhaar",
+        "Land records",
+        "Bank account",
+        "Self-declaration"
+      ],
+      "process": "Apply/verify on the PM-KISAN portal or through the state government's beneficiary list.",
+      "source": "https://pmkisan.gov.in/",
+      "_id": "af8830dc-9266-477f-9119-d96e887a1129",
+      "created_at": "2026-08-13T09:58:44Z"
+    },
+    {
+      "code": "pmfby",
+      "name": "PMFBY (Pradhan Mantri Fasal Bima Yojana)",
+      "category": "Central",
+      "summary": "Crop insurance scheme protecting farmers against crop loss from natural calamities, pests and diseases.",
+      "benefits": "Low premium (2% kharif, 1.5% rabi food crops, 5% commercial); full claim settlement on notified losses.",
+      "eligibility": [
+        "All farmers growing notified crops in notified areas",
+        "Tenant farmers and sharecroppers can also be covered"
+      ],
+      "documents": [
+        "Loan records or land records",
+        "Aadhaar",
+        "Bank account",
+        "Crop details"
+      ],
+      "process": "Enrol through bank, Common Service Centre (CSC) or insurance company before the notified cut-off date each season.",
+      "source": "https://pmfby.gov.in/",
+      "_id": "c3f2a05d-1f0c-4397-8761-69f5d0e4dad7",
+      "created_at": "2026-08-13T09:58:44Z"
+    },
+    {
+      "code": "kcc",
+      "name": "Kisan Credit Card (KCC)",
+      "category": "Central",
+      "summary": "Flexible credit card for farmers covering crop, investment, and allied activities.",
+      "benefits": "Affordable crop loans, flexible withdrawals, interest subvention available on timely repayment.",
+      "eligibility": [
+        "Farmers, tenant farmers, and sharecroppers",
+        "Farmers in animal husbandry and fisheries under the scheme"
+      ],
+      "documents": [
+        "Aadhaar",
+        "Land records or lease agreement",
+        "Passport photos",
+        "Bank account"
+      ],
+      "process": "Apply at any bank branch or through a Common Service Centre; banks issue KCC after verification.",
+      "source": "https://www.nabard.org/",
+      "_id": "9c191243-c504-4b44-8e0a-2f1e1ec024c7",
+      "created_at": "2026-08-13T09:58:44Z"
+    },
+    {
+      "code": "pmksy",
+      "name": "PMKSY (Pradhan Mantri Krishi Sinchayee Yojana)",
+      "category": "Central",
+      "summary": "'More crop per drop' â€” improves water use efficiency with irrigation and rainwater harvesting.",
+      "benefits": "Support for micro-irrigation (drip/sprinkler), water harvesting structures and command area development.",
+      "eligibility": [
+        "Farmers, farmer groups and water user associations",
+        "Gram Panchayats for water harvesting structures"
+      ],
+      "documents": [
+        "Land records",
+        "Aadhaar",
+        "Bank account",
+        "Project/beneficiary details"
+      ],
+      "process": "Apply through the state agriculture department or district mission office implementing PMKSY.",
+      "source": "https://pmksy.gov.in/",
+      "_id": "32e98663-cd6b-4ffb-98eb-6f8bbe033068",
+      "created_at": "2026-08-13T09:58:44Z"
+    },
+    {
+      "code": "soil-health-card",
+      "name": "Soil Health Card (SHC)",
+      "category": "Central",
+      "summary": "Soil testing at the farm level with personalised fertiliser recommendations.",
+      "benefits": "Free/near-free soil testing and a card with N, P, K and micronutrient guidance for 2 years.",
+      "eligibility": [
+        "All farmers with cultivable land"
+      ],
+      "documents": [
+        "Land records",
+        "Farmer details",
+        "Aadhaar"
+      ],
+      "process": "Soil sample collected by the state soil testing lab; card issued through the soil health card portal.",
+      "source": "https://www.soilhealth.dac.gov.in/",
+      "_id": "6d612330-bc01-449f-aa16-65d2705ca340",
+      "created_at": "2026-08-13T09:58:44Z"
+    },
+    {
+      "code": "enam",
+      "name": "e-NAM (National Agriculture Market)",
+      "category": "Central",
+      "summary": "Online pan-India trading platform connecting mandis for better prices.",
+      "benefits": "Transparent price discovery, online bidding, direct payment to farmers' accounts.",
+      "eligibility": [
+        "Farmers registered with an e-NAM-enabled mandi",
+        "Farmers' producer organisations and traders on the platform"
+      ],
+      "documents": [
+        "Aadhaar",
+        "Bank account",
+        "Farmer registration at linked mandi"
+      ],
+      "process": "Register at your nearest e-NAM mandi or through the e-NAM portal/mobile app.",
+      "source": "https://enam.gov.in/",
+      "_id": "17c7c547-0018-471f-98d1-f4de26473992",
+      "created_at": "2026-08-13T09:58:44Z"
+    },
+    {
+      "code": "pkvy",
+      "name": "PKVY (Paramparagat Krishi Vikas Yojana)",
+      "category": "Central",
+      "summary": "Promotes organic farming in clusters with certification support.",
+      "benefits": "Cluster-based organic farming, Rs. 50,000 per hectare support (3 years), certification assistance.",
+      "eligibility": [
+        "Farmers who want to take up organic farming",
+        "Farmer clusters/groups"
+      ],
+      "documents": [
+        "Land records",
+        "Aadhaar",
+        "Bank account",
+        "Cluster participation"
+      ],
+      "process": "Apply through the state agriculture department; clusters are formed by the implementing agency.",
+      "source": "https://pgsindia-ncof.gov.in/",
+      "_id": "9363c4d5-d9a7-4d2d-8ccd-33a6b50266cf",
+      "created_at": "2026-08-13T09:58:44Z"
+    },
+    {
+      "code": "kisan-call-centre",
+      "name": "Kisan Call Centre (KCC Helpline)",
+      "category": "Central",
+      "summary": "Free helpline where farmers can ask agriculture questions in local languages.",
+      "benefits": "Expert advice on crops, pests, weather, and schemes â€” toll free.",
+      "eligibility": [
+        "Any farmer"
+      ],
+      "documents": [
+        "None (call based)"
+      ],
+      "process": "Call 1800-180-1551 (toll free) from any phone.",
+      "source": "https://www.mkisan.gov.in/",
+      "_id": "3c44a0bc-8567-4698-ba4c-cd2f3fecd5bb",
+      "created_at": "2026-08-13T09:58:44Z"
+    },
+    {
+      "code": "state-scheme",
+      "name": "State Agriculture Schemes",
+      "category": "State",
+      "summary": "Each state runs its own subsidy and input-support programmes for farmers.",
+      "benefits": "Varies by state â€” input subsidies, equipment subsidy, free power, seeds etc.",
+      "eligibility": [
+        "Farmers resident in the respective state"
+      ],
+      "documents": [
+        "Land records",
+        "Aadhaar",
+        "Bank account"
+      ],
+      "process": "Contact your state agriculture department / district agriculture office for the current list.",
+      "source": "State Agriculture Department",
+      "_id": "af347a6e-4427-48fc-8273-3c048b047922",
+      "created_at": "2026-08-13T09:58:44Z"
+    }
+  ],
+  "notifications": []
+}

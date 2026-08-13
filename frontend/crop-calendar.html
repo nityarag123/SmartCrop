@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nav.calendar">Crop Calendar — SmartCrop</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-auth="required">
+
+  <header class="site-header" id="site-header"></header>
+
+  <main class="container" style="padding: 28px 0;">
+    <div class="page-head">
+      <div>
+        <h1 data-i18n="cal.title">Crop Calendar</h1>
+        <p class="muted" data-i18n="cal.subtitle">Sowing to harvesting — know what to do and when</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="toolbar">
+        <div class="form-group">
+          <label for="cal-crop" data-i18n="cal.crop">Select crop</label>
+          <select class="input" id="cal-crop">
+            <option value="rice">Rice</option>
+            <option value="wheat">Wheat</option>
+            <option value="maize">Maize</option>
+            <option value="sugarcane">Sugarcane</option>
+            <option value="cotton">Cotton</option>
+            <option value="groundnut">Groundnut</option>
+            <option value="soybean">Soybean</option>
+            <option value="chickpea">Chickpea</option>
+            <option value="potato">Potato</option>
+            <option value="tomato">Tomato</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cal-season" data-i18n="cal.season">Season</label>
+          <select class="input" id="cal-season"></select>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="cal-load" data-i18n="cal.load">Show Calendar</button>
+          <button class="btn btn-outline" id="cal-save" data-i18n="cal.save">Save as my crop</button>
+        </div>
+      </div>
+      <div id="cal-alert"></div>
+      <p class="muted small mt-2" id="cal-status"></p>
+    </div>
+
+    <div id="cal-result"><span class="spinner"></span></div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>

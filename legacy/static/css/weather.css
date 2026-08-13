@@ -1,0 +1,379 @@
+/* Modern Weather Page Styles */
+
+/* Weather Hero Section */
+.weather-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+}
+
+.weather-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+/* Weather Cards */
+.weather-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 1.5rem;
+}
+
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Weather Metrics */
+.weather-metric {
+    transition: all 0.3s ease;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-metric:hover {
+    transform: scale(1.05);
+}
+
+.weather-metric::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.weather-metric:hover::before {
+    left: 100%;
+}
+
+/* Gradient Backgrounds for Different Weather Conditions */
+.weather-clear {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.weather-cloudy {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.weather-rainy {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.weather-snowy {
+    background: linear-gradient(135deg, #e0f2f1 0%, #b2ebf2 100%);
+}
+
+.weather-thunderstorm {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+.weather-mist {
+    background: linear-gradient(135deg, #bdc3c7 0%, #95a5a6 100%);
+}
+
+/* Enhanced Buttons */
+.weather-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 1.25rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.weather-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.weather-btn:hover::before {
+    left: 100%;
+}
+
+.weather-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading Spinner */
+.weather-loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Forecast Cards */
+.forecast-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+
+/* Voice Control Buttons */
+.voice-control-btn {
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.voice-control-btn.recording {
+    animation: pulse 1.5s infinite;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+}
+
+.voice-control-btn.recording::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #ff6b6b;
+    border-radius: inherit;
+    animation: ripple 1.5s infinite;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes ripple {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.3); opacity: 0; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Weather Icons */
+.weather-icon {
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.weather-icon.sunny {
+    color: #ffa726;
+    animation: rotate 10s linear infinite;
+}
+
+.weather-icon.rainy {
+    color: #42a5f5;
+    animation: bounce 2s infinite;
+}
+
+.weather-icon.cloudy {
+    color: #90a4ae;
+    animation: float 3s ease-in-out infinite;
+}
+
+.weather-icon.snowy {
+    color: #e3f2fd;
+    animation: shake 2s infinite;
+}
+
+.weather-icon.thunderstorm {
+    color: #ffc107;
+    animation: flash 1s infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes flash {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.3; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .weather-hero {
+        min-height: 50vh;
+        padding: 2rem 0;
+    }
+
+    .weather-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .weather-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .weather-metric {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .weather-metric .text-3xl {
+        font-size: 1.875rem;
+    }
+
+    .forecast-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .weather-btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-hero h1 {
+        font-size: 2rem;
+    }
+
+    .weather-metric {
+        padding: 0.75rem;
+    }
+
+    .weather-metric .text-3xl {
+        font-size: 1.5rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .weather-icon,
+    .forecast-card,
+    .weather-btn,
+    .weather-card,
+    .weather-metric {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .weather-card {
+        border: 2px solid #000;
+    }
+
+    .weather-btn {
+        border: 2px solid currentColor;
+    }
+
+    .forecast-card {
+        border: 2px solid #000;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .weather-hero,
+    .voice-control-btn,
+    .weather-btn {
+        display: none;
+    }
+
+    .weather-card {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+
+    .forecast-card {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}
+
+/* Glass Morphism Effect */
+.glass {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Custom Scrollbar */
+.weather-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.weather-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.weather-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+    border-radius: 4px;
+}
+
+.weather-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #2563eb, #7c3aed);
+}

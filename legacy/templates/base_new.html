@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Crop Advisory</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-gradient-to-br from-green-50 to-blue-50 text-gray-900 min-h-screen">
+    <nav class="bg-white shadow-lg border-b-2 border-green-100 sticky top-0 z-40">
+      <div class="container mx-auto px-6 py-2">
+        <div class="flex justify-between items-center">
+          <!-- Logo Section -->
+          <a href="/" class="flex items-center space-x-4 group">
+            <div class="bg-gradient-to-br from-green-500 to-green-600 p-3 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <i class="fas fa-seedling text-white text-2xl group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-2xl text-gray-800 tracking-tight">SmartCrop</span>
+              <span class="text-green-600 text-sm font-medium">AI-Powered Agriculture</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center space-x-8">
+            {% if session.user_id %}
+              <!-- Main Navigation Links -->
+              <div class="flex items-center space-x-8">
+                <a href="/dashboard" class="nav-link text-gray-700 hover:text-green-600 font-medium transition duration-300 relative group">
+                  <span class="relative z-10">Dashboard</span>
+                  <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></div>
+                </a>
+                <a href="/analytics" class="nav-link text-gray-700 hover:text-green-600 font-medium transition duration-300 relative group">
+                  <span class="relative z-10">Analytics</span>
+                  <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></div>
+                </a>
+                <a href="/weather" class="nav-link text-gray-700 hover:text-green-600 font-medium transition duration-300 relative group">
+                  <span class="relative z-10">Weather</span>
+                  <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></div>
+                </a>
+                <a href="/crop-calendar" class="nav-link text-gray-700 hover:text-green-600 font-medium transition duration-300 relative group">
+                  <span class="relative z-10">Crop Calendar</span>
+                  <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></div>
+                </a>
+                <a href="/soil-analysis" class="nav-link text-gray-700 hover:text-green-600 font-medium transition duration-300 relative group">
+                  <span class="relative z-10">Soil Analysis</span>
+                  <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></div>
+                </a>
+                <a href="/market-prices" class="nav-link text-gray-700 hover:text-green-600 font-medium transition duration-300 relative group">
+                  <span class="relative z-10">Market Prices</span>
+                  <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></div>
+                </a>
+                <a href="/farm-management" class="nav-link text-gray-700 hover:text-green-600 font-medium transition duration-300 relative group">
+                  <span class="relative z-10">Kisan Mitra</span>
+                  <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></div>
+                </a>
+                <a href="/upload-pest" class="nav-link text-gray-700 hover:text-green-600 font-medium transition duration-300 relative group">
+                  <span class="relative z-10">Detect Pest</span>
+                  <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></div>
+                </a>
+              </div>
+
+              <!-- User Actions -->
+              <div class="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">
+                <!-- Theme Toggle -->
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="p-2 rounded-lg hover:bg-gray-100 transition duration-300">
+                  <i id="darkModeIcon" class="fas fa-moon text-gray-600 text-lg"></i>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <div class="relative">
+                  <button id="profileDropdown" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition duration-300">
+                    <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                      <i class="fas fa-user text-white text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">Profile</span>
+                    <i class="fas fa-chevron-down text-gray-500 text-sm"></i>
+                  </button>
+                  <div id="profileMenu" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 hidden">
+                    <a href="/profile" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition duration-300">
+                      <i class="fas fa-user mr-2"></i>My Profile
+                    </a>
+                    <a href="/settings" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition duration-300">
+                      <i class="fas fa-cog mr-2"></i>Settings
+                    </a>
+                    <div class="border-t border-gray-200"></div>
+                    <a href="/logout" class="logout-btn block px-4 py-2 text-red-600 hover:bg-red-50 transition duration-300">
+                      <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {% else %}
+              <div class="flex items-center space-x-4">
+                <a href="/login" class="px-6 py-2 text-gray-700 hover:text-green-600 font-medium transition duration-300">
+                  Login
+                </a>
+                <a href="/register" class="px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  Sign Up
+                </a>
+              </div>
+            {% endif %}
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="lg:hidden">
+            <button id="mobile-menu-btn" class="p-2 rounded-lg hover:bg-gray-100 transition duration-300">
+              <i class="fas fa-bars text-gray-700 text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-6 pb-6 border-t border-gray-200">
+          {% if session.user_id %}
+            <div class="flex flex-col space-y-4 mt-6">
+              <a href="/dashboard" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                <i class="fas fa-tachometer-alt mr-3 text-green-600"></i>Dashboard
+              </a>
+              <a href="/analytics" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                <i class="fas fa-chart-bar mr-3 text-green-600"></i>Analytics
+              </a>
+              <a href="/weather" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                <i class="fas fa-cloud-sun mr-3 text-green-600"></i>Weather
+              </a>
+              <a href="/crop-calendar" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                <i class="fas fa-calendar-alt mr-3 text-green-600"></i>Crop Calendar
+              </a>
+              <a href="/soil-analysis" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                <i class="fas fa-flask mr-3 text-green-600"></i>Soil Analysis
+              </a>
+              <a href="/market-prices" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                <i class="fas fa-rupee-sign mr-3 text-green-600"></i>Market Prices
+              </a>
+              <a href="/farm-management" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                <i class="fas fa-tractor mr-3 text-green-600"></i>Kisan Mitra
+              </a>
+              <a href="/upload-pest" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                <i class="fas fa-bug mr-3 text-green-600"></i>Detect Pest
+              </a>
+
+              <div class="border-t border-gray-200 pt-4 mt-4">
+                <a href="/profile" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                  <i class="fas fa-user mr-3 text-green-600"></i>My Profile
+                </a>
+                <a href="/settings" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                  <i class="fas fa-cog mr-3 text-green-600"></i>Settings
+                </a>
+                <a href="/logout" class="mobile-logout-btn flex items-center py-3 px-4 rounded-lg hover:bg-red-50 text-red-600 transition duration-300">
+                  <i class="fas fa-sign-out-alt mr-3"></i>Logout
+                </a>
+              </div>
+            </div>
+          {% else %}
+            <div class="flex flex-col space-y-4 mt-6">
+              <a href="/login" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg hover:bg-gray-50 transition duration-300">
+                <i class="fas fa-sign-in-alt mr-3 text-green-600"></i>Login
+              </a>
+              <a href="/register" class="mobile-nav-link flex items-center py-3 px-4 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-white transition duration-300">
+                <i class="fas fa-user-plus mr-3"></i>Sign Up
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+    <main class="w-full max-w-full px-4 py-8">
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- Voice Control Popup -->
+    <div id="voiceControlPopup" class="fixed bottom-6 right-6 bg-green-600 bg-opacity-90 rounded-lg shadow-lg p-4 flex items-center space-x-4 z-50 hidden">
+      <button id="popupMicrophoneBtn" aria-label="Voice Input" class="voice-btn" title="Click to speak">
+        <i id="popupMicrophoneIcon" class="fas fa-microphone text-xl text-white"></i>
+      </button>
+      <button id="popupSpeakerBtn" aria-label="Read Page Aloud" class="voice-btn" title="Read page content">
+        <i id="popupSpeakerIcon" class="fas fa-volume-up text-xl text-white"></i>
+      </button>
+      <button id="closeVoicePopupBtn" aria-label="Close Voice Controls" class="text-white text-lg font-bold focus:outline-none" title="Close voice controls">&times;</button>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2024 SmartCrop Advisory. Empowering farmers with AI-driven solutions.</p>
+      </div>
+    </footer>
+    <script type="module" src="/static/js/main.js"></script>
+  </body>
+</html>
