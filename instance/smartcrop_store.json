@@ -90,6 +90,24 @@
       "irrigation": "",
       "_id": "f3a4eaf2-e51b-4403-9dba-26a20b8f99e1",
       "created_at": "2026-08-13T11:19:11Z"
+    },
+    {
+      "id": 6,
+      "name": "Nityarag Kunuku",
+      "email": "nityaragkunuku@gmail.com",
+      "phone": "",
+      "password_hash": "scrypt:32768:8:1$hkqMsTHdOU1UGPdK$a4b70e25bd6db573664101ec8af2218b641e72ea846549067ee72ab8aa56a7fa2e5581a9357cda781b074bb19bf026e6b22fa4b9c9029f66b982cdc2a11a0b60",
+      "location": "",
+      "state": "",
+      "district": "",
+      "language": "en",
+      "role": "farmer",
+      "farm_size": "",
+      "soil_info": "",
+      "current_crop": "",
+      "irrigation": "",
+      "_id": "f81d8433-4f4e-4f7d-bd7a-ef6b63af4bde",
+      "created_at": "2026-10-09T16:46:25Z"
     }
   ],
   "farms": [],
@@ -147,6 +165,15 @@
       "engine": "knowledge-base",
       "_id": "6b907abb-aa9c-45c8-b822-9b697544ab3e",
       "created_at": "2026-08-13T11:24:08Z"
+    },
+    {
+      "user_id": 6,
+      "message": "hi",
+      "response": "I'm not sure about that one. I'm a farming assistant — I can help with crops, soil, pests, weather planning and government schemes. For example, try 'How do I grow rice?' or 'Which crop suits my soil?'. For serious crop problems, contact your local agriculture officer.",
+      "language": "en",
+      "engine": "knowledge-base",
+      "_id": "c309cc5b-128e-4d26-9bd8-2d1391675d23",
+      "created_at": "2026-10-09T16:53:26Z"
     }
   ],
   "soil_reports": [
@@ -366,6 +393,99 @@
       },
       "_id": "a206c922-df63-4579-9ea4-b10ca2682afe",
       "created_at": "2026-08-13T15:31:18Z"
+    },
+    {
+      "user_id": 5,
+      "engine": "soil-health-guidance",
+      "overall": "Good — minor corrections needed",
+      "ph": {
+        "value": 7.0,
+        "label": "Ideal",
+        "status": "medium",
+        "percent": 67
+      },
+      "nitrogen": {
+        "value": 25.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 83
+      },
+      "phosphorus": {
+        "value": 15.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "potassium": {
+        "value": 30.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "_id": "6d3cb9fd-4b93-4dc9-bf7d-0cbe42a5600f",
+      "created_at": "2026-10-05T15:08:52Z"
+    },
+    {
+      "user_id": 5,
+      "engine": "soil-health-guidance",
+      "overall": "Good — minor corrections needed",
+      "ph": {
+        "value": 7.0,
+        "label": "Ideal",
+        "status": "medium",
+        "percent": 67
+      },
+      "nitrogen": {
+        "value": 25.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 83
+      },
+      "phosphorus": {
+        "value": 15.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "potassium": {
+        "value": 30.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "_id": "5eb7b71d-f19f-4090-a5ac-a55ab9f61770",
+      "created_at": "2026-10-05T15:11:42Z"
+    },
+    {
+      "user_id": 6,
+      "engine": "soil-health-guidance",
+      "overall": "Good — minor corrections needed",
+      "ph": {
+        "value": 7.0,
+        "label": "Ideal",
+        "status": "medium",
+        "percent": 67
+      },
+      "nitrogen": {
+        "value": 25.0,
+        "label": "Low",
+        "status": "low",
+        "percent": 83
+      },
+      "phosphorus": {
+        "value": 15.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "potassium": {
+        "value": 30.0,
+        "label": "Medium",
+        "status": "medium",
+        "percent": 0
+      },
+      "_id": "ccf0ba56-5850-403b-98ed-c189105f9393",
+      "created_at": "2026-10-09T16:47:53Z"
     }
   ],
   "crop_recommendations": [
@@ -521,6 +641,74 @@
       "engine": "ML",
       "_id": "fb9cb357-5588-4c6a-b1a4-8d217d3bd38c",
       "created_at": "2026-08-13T14:59:49Z"
+    },
+    {
+      "user_id": 5,
+      "inputs": {
+        "temperature": 28.0,
+        "humidity": 65.0,
+        "rainfall": 120.0,
+        "ph": 6.5,
+        "nitrogen": 45.0,
+        "phosphorus": 35.0,
+        "potassium": 40.0
+      },
+      "crop": "Mango",
+      "confidence": 48.0,
+      "engine": "ML",
+      "_id": "4f91c8b2-68a3-4c0a-abff-52a89259bf73",
+      "created_at": "2026-10-05T15:07:44Z"
+    },
+    {
+      "user_id": 5,
+      "inputs": {
+        "temperature": 28.0,
+        "humidity": 80.0,
+        "rainfall": 200.0,
+        "ph": 6.5,
+        "nitrogen": 90.0,
+        "phosphorus": 45.0,
+        "potassium": 40.0
+      },
+      "crop": "Rice",
+      "confidence": 40.0,
+      "engine": "ML",
+      "_id": "81a614fb-5902-40fa-bc31-e96dcc79a2fb",
+      "created_at": "2026-10-05T15:10:14Z"
+    },
+    {
+      "user_id": 5,
+      "inputs": {
+        "temperature": 20.0,
+        "humidity": 60.0,
+        "rainfall": 75.0,
+        "ph": 6.5,
+        "nitrogen": 80.0,
+        "phosphorus": 40.0,
+        "potassium": 40.0
+      },
+      "crop": "Coffee",
+      "confidence": 38.0,
+      "engine": "ML",
+      "_id": "b47a2e46-cf2b-40c0-a402-3f2ff2cf6578",
+      "created_at": "2026-10-05T15:11:09Z"
+    },
+    {
+      "user_id": 6,
+      "inputs": {
+        "temperature": 28.0,
+        "humidity": 65.0,
+        "rainfall": 120.0,
+        "ph": 6.5,
+        "nitrogen": 45.0,
+        "phosphorus": 35.0,
+        "potassium": 40.0
+      },
+      "crop": "Mango",
+      "confidence": 48.0,
+      "engine": "ML",
+      "_id": "8c561f74-805a-4081-b453-edca767a00a8",
+      "created_at": "2026-10-09T16:47:34Z"
     }
   ],
   "pest_reports": [
@@ -919,6 +1107,33 @@
       "engine": "ML (trained on pest image dataset)",
       "_id": "7b81b3ea-795a-45d1-bb55-6790c3cad7c0",
       "created_at": "2026-08-13T16:14:07Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.374,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "e7322fb3-12cb-442d-8438-c98ae9bf1450",
+      "created_at": "2026-10-05T15:12:31Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.438,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "c4dc5afb-26a0-43f6-887e-c4b37c7b5ef1",
+      "created_at": "2026-10-05T15:13:30Z"
+    },
+    {
+      "user_id": 5,
+      "label": "Plant material — pest not confidently identified",
+      "category": "plant / leaf (pest not identified)",
+      "confidence": 0.438,
+      "engine": "ML (trained on pest image dataset)",
+      "_id": "288e77b9-0d84-421c-a177-0d5303c2d266",
+      "created_at": "2026-10-05T15:13:33Z"
     }
   ],
   "crop_calendar": [
